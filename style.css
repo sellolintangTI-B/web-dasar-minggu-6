@@ -1,11 +1,37 @@
-body {
-  background-color : #FBE4D6;
+.kucing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
 }
-
-h1 {
-  margin-left : 100px;
-  font-size : 100px;
-  font-family: "Emblema One", system-ui;
-  font-weight: 400;
-  font-style: normal;
+.kucing-baik {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  padding: 20px;
+  width: 80%;
+}
+.kucing-jahat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  padding: 20px;
+  width: 80%;
+}
+.foto-kucing {
+  border: 3px solid #333;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.foto-kucing:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .kucing-baik, .kucing-jahat {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }
